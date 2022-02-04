@@ -1,11 +1,11 @@
-import {useState} from 'react';
+import {useState} from "react";
 import './App.css';
 
 function App() {
   const [weight, setWeight] = useState(0);
   const [bottles, setBottles] = useState(0);
   const [time, setTime] = useState(0);
-  const [gender, setGender] = useState('male');
+  const [gender, setGender] = useState("male");
   const [result, setResult] = useState(0);
 
   function handleSubmit(e) {
@@ -17,17 +17,18 @@ function App() {
     let burning = weight / 10;
     let gramsLeft = grams - burning * time;
 
-    if (gender === 'male') {
+    if (gender === "male") {
       alcoholLevel = gramsLeft / (weight * 0.7);
     }
     else {
       alcoholLevel = gramsLeft / (weight * 0.6);
     }
-    setResult(alcoholLevel);
 
     if(alcoholLevel < 0){
-      alcoholLevel = 0
+      alcoholLevel = 0;
     }
+
+    setResult(alcoholLevel);
   }
 
   return (
@@ -41,6 +42,7 @@ function App() {
         <div>
           <label>Bottles</label>
           <select name="bottles" value={bottles} onChange={e => setBottles(e.target.value)}>
+            <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -51,6 +53,7 @@ function App() {
         <div>
           <label>Time</label>
           <select name="time" value={time} onChange={e => setTime(e.target.value)}>
+            <option value="0">0h</option>
             <option value="1">1h</option>
             <option value="2">2h</option>
             <option value="3">3h</option>
