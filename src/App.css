@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body{
+  font-family: Lobster;
+  font-size: 25px;
+  background-color: pink;
+}
+
+form{
+  padding-left: 40px;
+}
+
+h3{
+  padding-left: 40px;
+  font-size: 35px;
+}
+
+label{
+  padding-right: 10px;
+}
+
+select, input{
+  font-size: 20px;
+  font-family: Lobster;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+button{
+  font-size: 25px;
+  padding: 5px;
+  margin-top: 15px;
+  font-family: Lobster;
+  color: white;
+  background-color: rgb(252, 138, 157);
+  border-radius: 10px;
+}
